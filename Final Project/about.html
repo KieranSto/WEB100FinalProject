@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/general.css">
+</head>
+<body onload=display_ct();>
+    <span id='ct' ></span>
+  
+    <ul>
+  
+        <li><a class="active" href="index.html">Home</a></li> 
+        <li><a href="about.html">About</a></li> 
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="java.html">Java Day/Time</a></li>  
+  
+    </ul>
+
+    <div>
+        <p class="myabout"> Kieran St-Onge </p>
+    
+        <p class="myabout"> WEB11-N885: Internet/Web Fundamental  </p>
+        
+    
+        <img class="mySlides" src="images/Kieran.png" alt="Audi S4" width="300" height="300" style="border:5px solid black"  > 
+       
+
+    </div>
+
+    <script type="text/javascript"> 
+        function display_c(){
+        var refresh=1000; // Refresh rate in milli seconds
+        mytime=setTimeout('display_ct()',refresh)
+        }
+        
+        function display_ct() {
+        var x = new Date()
+        document.getElementById('ct').innerHTML = x;
+        display_c();
+         }
+        </script>
+</body>
+</html>

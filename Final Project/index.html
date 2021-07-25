@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/general.css">
+</head>
+<body onload=display_ct();>
+    <span id='ct' ></span>
+  
+    <ul>
+  
+        <li><a class="active" href="index.html">Home</a></li> 
+        <li><a href="about.html">About</a></li> 
+        <li><a href="contact.html">Contact</a></li> 
+        <li><a href="java.html">Java Day/Time</a></li> 
+  
+    </ul>
+    
+   <div>
+    <p class="mytest"> ------------------- APR TUNES ------------------- </p>
+
+    <p class="mytest"> &check; APR CLOSED CARBON FIBER INTAKE - B8 6/8 CYL INTAKE AIRBOX </p>
+    <p class="mytest"> &check; APR CARBON FIBER INTAKE - B8 3.0T BACK TUBE </p>
+    <p class="mytest"> &check; APR ECU UPGRADE - 3.0T EA837 V6 (SIMOS 8.5) </p>
+    <p class="mytest"> &check; APR TCU UPGRADE - 7 SPEED DSG AND S TRONIC (DL501) </p>
+    <p class="mytest">  &check; APR SUPERCHARGER CRANK PULLEY - 3.0 TFSI </p>
+    <p class="mytest"> &check; APR SUPERCHARGER DRIVE PULLEY - 3.0 TFSI </p>
+    <p class="mytest"> &CircleTimes; APR CPS RADIATOR - 3.0/4.0T TFSI - B8/B8.5 </p>
+    <p class="mytest"> &CircleTimes; APR ULTRACHARGER THROTTLE BODY UPGRADE - 3.0 TFSI - B8/B8.5 </p>
+
+    <img class="mySlides" src="images/IMG1.jpeg" alt="Audi S4" width="600" height="300" style="border:5px solid black"  > 
+    <img class="mySlides" src="images/IMG2.jpeg" alt="Audi S4" width="600" height="300" style="border:5px solid black" >
+    <img class="mySlides" src="images/IMG3.jpeg" alt="Audi S4" width="600" height="300" style="border:5px solid black" >
+    <img class="mySlides" src="images/IMG4.jpeg" alt="Audi S4" width="600" height="300" style="border:5px solid black" >
+    
+
+    <p>&check;  = Tune done</p>
+    <p>&CircleTimes; = Tune not done</p>
+   </div>
+
+<script>
+        var slideIndex = 0;
+    carousel();
+
+ function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+<script type="text/javascript"> 
+    function display_c(){
+    var refresh=1000; // Refresh rate in milli seconds
+    mytime=setTimeout('display_ct()',refresh)
+    }
+    
+    function display_ct() {
+    var x = new Date()
+    document.getElementById('ct').innerHTML = x;
+    display_c();
+     }
+    </script>
+</body>
+
+</html>

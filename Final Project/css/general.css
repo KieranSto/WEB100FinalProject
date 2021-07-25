@@ -1,0 +1,94 @@
+/* For Top menu on index */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+
+  .active {
+    background-color: #04AA6D;
+  }
+  /* end of top menu index */
+
+  body, html {
+    background-image: url("../images/aprback.png");
+    background-color: #cccccc;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+   body {
+    color: whitesmoke;
+  }
+
+  /* mouse over link */
+a:hover {
+    color: #ff0000;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #0000FF;
+  }
+
+  .mytest {
+    float: right;
+  }
+
+  div {
+    background-color: rgb(240, 4, 4);
+    width: 300px;
+    border: 15px solid rgb(3, 3, 3);
+    padding: 50px;
+    margin: 20px;
+  }
+
+  .mySlides {
+    background-color: rgb(7, 0, 0);
+    width: 600px;
+    border: 15px solid rgb(245, 5, 5);
+    padding: 10px;
+    margin: 20px;
+  }
+
+  body {
+    background-color: lightgreen;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .mySlides {
+          background-color: lightblue;
+          width: 300px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .myabout {
+              background-color: lightblue;
+              width: 200px;
+            } 
+  }

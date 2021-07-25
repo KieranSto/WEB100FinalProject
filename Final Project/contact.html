@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/general.css">
+</head>
+<body onload=display_ct();>
+    <span id='ct' ></span>
+  
+    <ul>
+  
+        <li><a class="active" href="index.html">Home</a></li> 
+        <li><a href="about.html">About</a></li> 
+        <li><a href="contact.html">Contact</a></li> 
+        <li><a href="java.html">Java Day/Time</a></li> 
+  
+    </ul>
+
+    <form>
+        <br><br>
+        Input Type Text:<br>
+        <input type="text" name="Username">
+        <br><br>
+        Input Type Date/Time:<br>
+        <input type="datetime-local">
+        <br><br>
+        Radio Buttons:<br>
+        <input type="radio">
+        <br><br>
+        Range Sliders:<br>
+        <input type="range">
+        <br><br>
+        Checkbox:<br>
+        <input type="checkbox">
+        <br><br>
+        Spinner:<br>
+        <input type="NUMBER" MIN="0" MAX="100" STEP="5" VALUE="0" SIZE="6">
+        <br><br>
+      </form>
+
+      Selection List:<br>
+      <form action="/action_page.php">
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="bmw">Opel</option>
+          <option value="audi">Audi</option>
+        </select>
+        <br><br>
+       </form>
+     
+       <input type="submit">
+       <br><br>
+       <input type="reset">
+       <br><br>
+    
+    Text  Area:<br>
+    <textarea id="Ausi" name="Ausi" rows="4" cols="50"> Audi S4 2013 with APRT Tunes done at GMP Performance </textarea>
+
+
+    <br><br> 
+    <label for="browser">Choose your car model</label>
+    <input list="browsers" name="browser" id="browser">
+    
+    <datalist id="browsers">
+      <option value="Audi">
+      <option value="BMW">
+      <option value="Porche">
+      <option value="Ford">
+      <option value="Toyota">
+    </datalist>
+
+    <br><br>
+    <h2>JavaScript Validation</h2>
+
+   <form name="myForm" action=" onsubmit="return validateForm()" method="post">
+      Name: <input type="text" name="fname">
+      <input type="submit" value="Submit">
+   </form>
+    <script>
+        function validateForm() {
+          let x = document.forms["myForm"]["fname"].value;
+          if (x == "") {
+            alert("Name must be filled out");
+            return false;
+          }
+        }
+        </script>
+
+<script type="text/javascript"> 
+    function display_c(){
+    var refresh=1000; // Refresh rate in milli seconds
+    mytime=setTimeout('display_ct()',refresh)
+    }
+    
+    function display_ct() {
+    var x = new Date()
+    document.getElementById('ct').innerHTML = x;
+    display_c();
+     }
+    </script>
+</body>
+</html>
